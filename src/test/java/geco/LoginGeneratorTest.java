@@ -52,4 +52,14 @@ public class LoginGeneratorTest {
         loginGenerator.generateLoginForNomAndPrenom("Ralling","John");
         assertEquals(true,loginService.loginExists("JRAL2"));
     }
+
+    @Test
+    public void generateLoginForNomAndPrenomPaulDU() {
+        //Given new login generate
+        //When
+        //Then the result should be "PDU"
+        loginGenerator = new LoginGenerator(loginService);
+        loginGenerator.generateLoginForNomAndPrenom("Du","Paul");
+        assertEquals(true,loginService.loginExists("PDU"));
+    }
 }
